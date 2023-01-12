@@ -1,0 +1,38 @@
+Login:
+
+{
+    "email":"karan@gmail.com",
+    "password":"Admin@123"
+
+}
+
+Register:
+
+{
+    "name" : "Ritik",
+    "email":"ritik@gmail.com",
+    "password":"Admin@123"
+
+}
+
+addreq:
+
+{
+"assettype": "LAPTOP",
+"numberassets":3,
+"dateandtime":"2023-01-24",
+"fromplace":"Bihar",
+"toplace":"Himachal",
+"todeliverperson":"Amit",
+"packagesensitivity":"SENSITIVE"
+}
+
+addrider:
+
+{
+"fromplace": "Punjab",
+"toplace":"Jammu",
+"dateandtime":"2023-01-24",
+"travelmedium":"CAR",
+"quantity":3
+}

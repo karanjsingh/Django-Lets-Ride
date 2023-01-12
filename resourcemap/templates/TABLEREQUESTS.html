@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table id="myTable"  style="min-width:103%;"  class="table table-fluid table-striped sampleTable table table-bordered table-hover ">
+    <thead>
+    <tr>
+    {% for item in model_headers %}
+    <th scope="col">{{ item }}</th>
+    {% endfor %}
+    </tr>
+</thead>
+<tbody>
+    {% for all_rows in query_results %}
+    
+        <tr> 
+        {% for every_column in all_rows %}
+            {% if every_column == "APPLIED" %}
+                <td style="background: rgb(6, 251, 6);">{{ every_column }}</td>
+            
+            {% else %}
+                <td style="color: rgb(17, 17, 17);">{{ every_column }}</td>
+            {% endif %}
+        {% endfor %}
+        </tr>
+
+    {% endfor %}
+</tbody>
+</table>
+
+<form action="{% url 'request' %}" method="GET" enctype="multipart/form-data">
+    <div class="form-group">
+        <button class="btn btn-outline-primary" type="submit"><i class="fas fa-upload"></i> + Add Asset Request</button>
+    </div>
+</form>
+{% endblock %}
